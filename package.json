@@ -1,0 +1,17 @@
+{
+  "name": "poc-algorithms-data-structures-javascript",
+  "version": "1.0.0",
+  "description": "learning about algorithms and data structures",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ericoalmeida/poc-algorithms-data-structures-javascript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ericoalmeida/poc-algorithms-data-structures-javascript/issues"
+  },
+  "homepage": "https://github.com/ericoalmeida/poc-algorithms-data-structures-javascript#readme"
+}
