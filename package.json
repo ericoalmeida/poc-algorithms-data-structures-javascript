@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/ericoalmeida/poc-algorithms-data-structures-javascript#readme",
   "dependencies": {
+    "@faker-js/faker": "^7.3.0",
     "chai": "^4.3.6",
     "mocha": "^10.0.0"
   },
