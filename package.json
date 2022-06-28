@@ -11,7 +11,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
-    "test":"npx mocha test/**/*.spec.js --require @babel/register"
+    "test": "npx mocha test/**/*.spec.js --require @babel/register"
   },
   "bugs": {
     "url": "https://github.com/ericoalmeida/poc-algorithms-data-structures-javascript/issues"
