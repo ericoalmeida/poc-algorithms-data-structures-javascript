@@ -10,4 +10,8 @@ export default class Stack {
   push(element) {
     this.items.push(element);
   }
+
+  peek() {
+    return this.items[this.items.length - 1];
+  }
 }
