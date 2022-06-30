@@ -22,4 +22,19 @@ describe('Stack', () => {
       expect(stack.isEmpty()).to.be.false;
     });
   });
+
+  describe('#peek', () => {
+    it('Should return an element from stack top', () => {
+      const stack = new Stack();
+
+      const expectedWord = faker.lorem.word();
+
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(expectedWord);
+
+      expect(stack.peek()).to.be.equal(expectedWord);
+    });
+  });
 });
