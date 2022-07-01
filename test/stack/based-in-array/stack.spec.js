@@ -37,4 +37,20 @@ describe('Stack', () => {
       expect(stack.peek()).to.be.equal(expectedWord);
     });
   });
+
+  describe('#size', () => {
+    it('Should get the size of stack', () => {
+      const stack = new Stack();
+
+      const expectedStackSize = 5;
+
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+
+      expect(stack.size()).to.be.equal(expectedStackSize);
+    });
+  });
 });
