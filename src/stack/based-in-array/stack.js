@@ -14,4 +14,8 @@ export default class Stack {
   peek() {
     return this.items[this.items.length - 1];
   }
+
+  size() {
+    return this.items.length;
+  }
 }
