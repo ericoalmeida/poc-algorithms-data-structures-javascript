@@ -53,4 +53,21 @@ describe('Stack', () => {
       expect(stack.size()).to.be.equal(expectedStackSize);
     });
   });
+
+  describe('#pop', () => {
+    it('Should return/remove an element from stack top', () => {
+      const stack = new Stack();
+
+      const expectedWord = faker.lorem.word();
+      const expectedStackSize = 3;
+
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(expectedWord);
+
+      expect(stack.pop()).to.be.equal(expectedWord);
+      expect(stack.size()).to.be.equal(expectedStackSize);
+    });
+  });
 });
