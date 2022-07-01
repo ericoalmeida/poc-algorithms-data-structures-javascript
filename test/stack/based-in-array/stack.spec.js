@@ -70,4 +70,20 @@ describe('Stack', () => {
       expect(stack.size()).to.be.equal(expectedStackSize);
     });
   });
+
+  describe('#clear', () => {
+    it('Should remove all elements from stack', () => {
+      const stack = new Stack();
+
+      const expectedStackSize = 0;
+
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+      stack.push(faker.lorem.word());
+
+      stack.clear();
+
+      expect(stack.size()).to.be.equal(expectedStackSize);
+    });
+  });
 });
