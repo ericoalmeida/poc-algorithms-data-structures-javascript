@@ -20,4 +20,18 @@ export default class Stack {
   size() {
     return this.count;
   }
+
+  pop() {
+    if (this.isEmpty()) {
+      return;
+    }
+
+    this.count--;
+
+    const element = this.items[this.count];
+
+    delete this.items[this.count];
+
+    return element;
+  }
 }
