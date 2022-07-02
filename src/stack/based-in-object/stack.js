@@ -7,4 +7,9 @@ export default class Stack {
   isEmpty() {
     return this.count === 0;
   }
+
+  push(element) {
+    this.items[this.count] = element;
+    this.count++;
+  }
 }
