@@ -14,7 +14,7 @@ describe('Stack based in object', () => {
   });
 
   describe('#push', () => {
-    it('Should create an empty stack', () => {
+    it('Should add an element into the stack', () => {
       const stack = new Stack();
 
       stack.push(faker.random.word());
