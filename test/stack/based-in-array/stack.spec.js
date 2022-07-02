@@ -4,7 +4,7 @@ import { describe, it } from 'mocha';
 
 import Stack from '../../../src/stack/based-in-array/stack';
 
-describe('Stack', () => {
+describe('Stack based in array', () => {
   describe('#isEmpty', () => {
     it('Should create an empty stack', () => {
       const stack = new Stack();
