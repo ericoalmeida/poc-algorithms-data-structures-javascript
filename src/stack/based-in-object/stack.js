@@ -12,4 +12,8 @@ export default class Stack {
     this.items[this.count] = element;
     this.count++;
   }
+
+  peek() {
+    return this.items[this.count - 1];
+  }
 }
