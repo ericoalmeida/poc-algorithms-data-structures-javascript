@@ -37,4 +37,18 @@ describe('Stack based in object', () => {
       expect(stack.peek()).to.be.equals(expectedStackTopElement);
     });
   });
+
+  describe('#size', () => {
+    it('Should return the size of stack', () => {
+      const stack = new Stack();
+
+      const expectedSizeStack = 3;
+
+      stack.push(faker.random.word());
+      stack.push(faker.random.word());
+      stack.push(faker.random.word());
+
+      expect(stack.size()).to.be.equals(expectedSizeStack);
+    });
+  });
 });
