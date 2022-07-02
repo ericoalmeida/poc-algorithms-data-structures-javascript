@@ -51,4 +51,35 @@ describe('Stack based in object', () => {
       expect(stack.size()).to.be.equals(expectedSizeStack);
     });
   });
+
+  describe('#pop', () => {
+    it('Should return/remove an element of stack', () => {
+      const stack = new Stack();
+
+      const expectedStackTopElement = faker.random.word();
+      const expectedStackSize = 3;
+
+      stack.push(faker.random.word());
+      stack.push(faker.random.word());
+      stack.push(faker.random.word());
+      stack.push(expectedStackTopElement);
+
+      const element = stack.pop();
+
+      expect(element).to.be.equals(expectedStackTopElement);
+      expect(stack.size()).to.be.equals(expectedStackSize);
+    });
+
+    it('Should return undefined when try to remove an element of  a empty stack', () => {
+      const stack = new Stack();
+
+      const expectedUndefinedElement = undefined;
+      const expectedStackSize = 0;
+
+      const element = stack.pop();
+
+      expect(element).to.be.equals(expectedUndefinedElement);
+      expect(stack.size()).to.be.equals(expectedStackSize);
+    });
+  });
 });

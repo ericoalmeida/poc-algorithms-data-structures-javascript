@@ -29,7 +29,6 @@ export default class Stack {
     this.count--;
 
     const element = this.items[this.count];
-
     delete this.items[this.count];
 
     return element;
