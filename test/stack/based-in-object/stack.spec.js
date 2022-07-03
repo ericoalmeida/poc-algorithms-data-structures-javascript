@@ -126,5 +126,13 @@ describe('Stack based in object', () => {
 
       expect(stack.print()).to.be.equals(expectedStackDataPrinted);
     });
+
+    it('Should print an empty string when stack is empty', () => {
+      const stack = new Stack();
+
+      const expectedStackDataPrinted = '';
+
+      expect(stack.print()).to.be.equals(expectedStackDataPrinted);
+    });
   });
 });
