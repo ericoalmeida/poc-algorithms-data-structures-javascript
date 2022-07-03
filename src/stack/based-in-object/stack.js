@@ -37,4 +37,9 @@ export default class Stack {
 
     return element;
   }
+
+  clear() {
+    this.count = 0;
+    this.items = {};
+  }
 }
