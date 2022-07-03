@@ -94,4 +94,21 @@ describe('Stack based in object', () => {
       expect(stack.size()).to.be.equals(expectedStackSize);
     });
   });
+
+  describe('#clear', () => {
+    it('Should clear all stack elements', () => {
+      const stack = new Stack();
+
+      const expectedStackSize = 0;
+
+      stack.push(faker.random.word());
+      stack.push(faker.random.word());
+      stack.push(faker.random.word());
+
+      stack.clear();
+
+      expect(stack.isEmpty()).to.be.true;
+      expect(stack.size()).to.be.equals(expectedStackSize);
+    });
+  });
 });
