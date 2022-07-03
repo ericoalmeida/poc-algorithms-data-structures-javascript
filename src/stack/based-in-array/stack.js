@@ -26,4 +26,8 @@ export default class Stack {
   clear() {
     this.items = [];
   }
+
+  print() {
+    return this.items.toString();
+  }
 }
