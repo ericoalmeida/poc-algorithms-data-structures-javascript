@@ -1,16 +1,24 @@
+const STACK = new WeakMap();
+
 export default class Stack {
   constructor() {
-    this.count = 0;
-    this.items = {};
+    STACK.set(this, {
+      count: 0,
+      data: {},
+    });
   }
 
   isEmpty() {
-    return this.count === 0;
+    const stack = STACK.get(this);
+
+    return stack.count === 0;
   }
 
   push(element) {
-    this.items[this.count] = element;
-    this.count++;
+    const stack = STACK.get(this);
+
+    stack.data[stack.count] = element;
+    stack.count++;
   }
 
   peek() {
@@ -18,29 +26,36 @@ export default class Stack {
       return;
     }
 
-    return this.items[this.count - 1];
+    const stack = STACK.get(this);
+
+    return stack.data[stack.count - 1];
   }
 
   size() {
-    return this.count;
+    const stack = STACK.get(this);
+
+    return stack.count;
   }
 
   pop() {
     if (this.isEmpty()) {
       return;
     }
+    const stack = STACK.get(this);
 
-    this.count--;
+    stack.count--;
 
-    const element = this.items[this.count];
-    delete this.items[this.count];
+    const element = stack.data[stack.count];
+    delete stack.data[stack.count];
 
     return element;
   }
 
   clear() {
-    this.count = 0;
-    this.items = {};
+    const stack = STACK.get(this);
+
+    stack.count = 0;
+    stack.data = {};
   }
 
   print() {
@@ -50,10 +65,12 @@ export default class Stack {
       return stackData;
     }
 
-    stackData = `${this.items[0]}`;
+    const stack = STACK.get(this);
 
-    for (let i = 1; i < this.count; i++) {
-      stackData = `${stackData},${this.items[i]}`;
+    stackData = `${stack.data[0]}`;
+
+    for (let i = 1; i < stack.count; i++) {
+      stackData = `${stackData},${stack.data[i]}`;
     }
 
     return stackData;
