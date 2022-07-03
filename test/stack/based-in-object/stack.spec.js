@@ -36,6 +36,18 @@ describe('Stack based in object', () => {
 
       expect(stack.peek()).to.be.equals(expectedStackTopElement);
     });
+
+    it('Should return undefined when try to get an element of a empty stack', () => {
+      const stack = new Stack();
+
+      const expectedUndefinedElement = undefined;
+      const expectedStackSize = 0;
+
+      const element = stack.pop();
+
+      expect(element).to.be.equals(expectedUndefinedElement);
+      expect(stack.size()).to.be.equals(expectedStackSize);
+    });
   });
 
   describe('#size', () => {

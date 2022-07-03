@@ -14,6 +14,10 @@ export default class Stack {
   }
 
   peek() {
+    if (this.isEmpty()) {
+      return;
+    }
+
     return this.items[this.count - 1];
   }
 
