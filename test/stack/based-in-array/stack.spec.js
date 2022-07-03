@@ -95,5 +95,19 @@ describe('Stack based in array', () => {
 
       expect(stack.print()).to.be.equals(expectedStackDataPrinted);
     });
+
+    it('Should print all stack elements', () => {
+      const stack = new Stack();
+
+      const firstStackElement = faker.random.word();
+      const secondStackElement = faker.random.word();
+
+      const expectedStackDataPrinted = `${firstStackElement},${secondStackElement}`;
+
+      stack.push(firstStackElement);
+      stack.push(secondStackElement);
+
+      expect(stack.print()).to.be.equals(expectedStackDataPrinted);
+    });
   });
 });
