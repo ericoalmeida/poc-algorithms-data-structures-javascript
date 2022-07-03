@@ -12,6 +12,10 @@ export default class Stack {
   }
 
   peek() {
+    if (this.isEmpty()) {
+      return;
+    }
+
     return this.items[this.items.length - 1];
   }
 
@@ -20,6 +24,10 @@ export default class Stack {
   }
 
   pop() {
+    if (this.isEmpty()) {
+      return;
+    }
+
     return this.items.pop();
   }
 
