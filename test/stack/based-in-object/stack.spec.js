@@ -111,4 +111,20 @@ describe('Stack based in object', () => {
       expect(stack.size()).to.be.equals(expectedStackSize);
     });
   });
+
+  describe('#print', () => {
+    it('Should print all stack elements', () => {
+      const stack = new Stack();
+
+      const firstStackElement = faker.random.word();
+      const secondStackElement = faker.random.word();
+
+      const expectedStackDataPrinted = `${firstStackElement},${secondStackElement}`;
+
+      stack.push(firstStackElement);
+      stack.push(secondStackElement);
+
+      expect(stack.print()).to.be.equals(expectedStackDataPrinted);
+    });
+  });
 });
