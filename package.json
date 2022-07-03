@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "scripts": {
+    "start": "npx sucrase-node $FILE",
     "test": "npx mocha test/**/*.spec.js --require @babel/register"
   },
   "bugs": {
