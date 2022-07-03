@@ -86,4 +86,14 @@ describe('Stack based in array', () => {
       expect(stack.size()).to.be.equal(expectedStackSize);
     });
   });
+
+  describe('#print', () => {
+    it('Should print an empty string when stack is empty', () => {
+      const stack = new Stack();
+
+      const expectedStackDataPrinted = '';
+
+      expect(stack.print()).to.be.equals(expectedStackDataPrinted);
+    });
+  });
 });
