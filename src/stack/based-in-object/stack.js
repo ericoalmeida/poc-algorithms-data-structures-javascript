@@ -42,4 +42,20 @@ export default class Stack {
     this.count = 0;
     this.items = {};
   }
+
+  print() {
+    let stackData = '';
+
+    if (this.isEmpty()) {
+      return stackData;
+    }
+
+    stackData = `${this.items[0]}`;
+
+    for (let i = 1; i < this.count; i++) {
+      stackData = `${stackData},${this.items[i]}`;
+    }
+
+    return stackData;
+  }
 }
